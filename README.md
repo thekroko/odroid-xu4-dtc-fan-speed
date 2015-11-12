@@ -30,3 +30,16 @@ chmod +x updateThermals.sh
 ./updateThermals.sh
 ```
 
+The temperature trip zones (at which the next fan level is set), and the fan speeds can be changed by editing the shell script:
+
+```sh
+# Our Settings (edit values here!)
+# Temperature is in milli degrees celsius (1000 = 1 degree), fan speeds are from 0 to 255 (fan starts spinning at 50-ish)
+FAN0=$(hex 0)
+TRIP0=$(hex  60000) FAN1=$(hex  75)
+TRIP1=$(hex  80000) FAN2=$(hex 170)
+TRIP2=$(hex  90000) FAN3=$(hex 230)
+# </Our Settings>
+```
+
+i.e. "TRIP0" means that at 60 degrees celsius the fan will be powered on at 75/255 = ~30%.

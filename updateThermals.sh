@@ -14,12 +14,13 @@ hex() {
 #TRIP2=$(hex  70000) FAN3=$(hex 230)
 #TRIP3=$(hex 120000)
 
-# Our Settings (insert values here:
+# Our Settings (edit values here!)
 # Temperature is in milli degrees celsius (1000 = 1 degree), fan speeds are from 0 to 255 (fan starts spinning at 50-ish)
 FAN0=$(hex 0)
 TRIP0=$(hex  60000) FAN1=$(hex  75)
 TRIP1=$(hex  80000) FAN2=$(hex 170)
 TRIP2=$(hex  90000) FAN3=$(hex 230)
+# </Our Settings>
 
 for f in *.dtb; do
   echo "Modifying $f .."
